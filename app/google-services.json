@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1058169485908",
+    "project_id": "sportkardi",
+    "storage_bucket": "sportkardi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058169485908:android:eead4ec59cfe1465aa8bc1",
+        "android_client_info": {
+          "package_name": "com.example.sportkardi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGxRBV58WbfERd9-d6zdGHO5D8I3luVA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

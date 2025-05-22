@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?backgroundColor"
+    tools:context=".Fragment.StatisticsBloodPressureFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <LinearLayout
+                android:id="@+id/firstWeekLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView29"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="1. hét összesítése"
+                    android:textColor="?colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center">
+
+                    <TableLayout
+                        android:id="@+id/table1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView28"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Összesítés"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView27"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Systole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView37"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diastole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Pulzus\n(1/perc)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView43"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Átlag"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysAver1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasAver1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsAver1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView44"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Maximum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMax1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMax1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMax1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView51"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Minimum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMin1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMin1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMin1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView55"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Szórás"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDisp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDisp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDisp1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView56"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diurnális index"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDiur1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDiur1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDiur1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                    </TableLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondWeekLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="2. hét összesítése"
+                    android:textColor="?colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center">
+
+                    <TableLayout
+                        android:id="@+id/table2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Összesítés"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Systole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diastole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Pulzus\n(1/perc)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Átlag"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysAver2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasAver2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsAver2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Maximum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMax2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMax2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMax2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Minimum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMin2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMin2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMin2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Szórás"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDisp2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDisp2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDisp2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diurnális index"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDiur2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDiur2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDiur2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                    </TableLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdWeekLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="3. hét összesítése"
+                    android:textColor="?colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center">
+
+                    <TableLayout
+                        android:id="@+id/table3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Összesítés"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Systole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diastole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Pulzus\n(1/perc)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Átlag"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysAver3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasAver3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsAver3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Maximum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMax3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMax3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMax3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Minimum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMin3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMin3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMin3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Szórás"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDisp3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDisp3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDisp3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diurnális index"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDiur3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDiur3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDiur3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                    </TableLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourthWeekLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="4. hét összesítése"
+                    android:textColor="?colorPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center">
+
+                    <TableLayout
+                        android:id="@+id/table4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_table"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Összesítés"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Systole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diastole\n(Hgmm)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Pulzus\n(1/perc)"
+                                android:textAlignment="center"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Átlag"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysAver4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasAver4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsAver4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Maximum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMax4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMax4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMax4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Minimum"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysMin4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasMin4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsMin4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Szórás"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDisp4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDisp4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDisp4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="0"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="Diurnális index"
+                                android:textColor="?colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/sysDiur4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="1"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/diasDiur4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+
+                            <TextView
+                                android:id="@+id/pulsDiur4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="3"
+                                android:background="@drawable/border_table_cell"
+                                android:padding="10dp"
+                                android:text="-"
+                                android:textAlignment="center"
+                                android:textColor="?android:textColor" />
+                        </TableRow>
+
+                    </TableLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

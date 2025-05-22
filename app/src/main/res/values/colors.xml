@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="login">#bef7ff</color>
+    <color name="a">#1a5366</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#479ab5</color>
+    <color name="blue">#1a5366</color>
+    <color name="purple_700">#1a5366</color>
+    <color name="teal_200">#59CAC9</color>
+    <color name="teal_700">#479ab5</color>
+    <color name="grey">#737C7C</color>
+    <color name="background">#d4e6e8</color>
+    <color name="background_card">#e9f9ff</color>
+<!--    uj stilus-->
+    <color name="red">#ff0000</color>
+    <color name="dark_blue">#1a5366</color>
+    <color name="light_blue">#bef7ff</color>
+    <color name="darkest_blue">#112836</color>
+    <color name="ic_default">#646464</color>
+    <color name="background_light">#ffffff</color>
+    <color name="background_dark">#242424</color>
+    <color name="appbar_dark">#2b2b2b</color>
+    <color name="card_dark">#313131</color>
+    <color name="input_color">#525252</color>
+    <color name="input_color_dark">#b6b6b6</color>
+    <color name="previous_appointment_light">#ebebeb</color>
+    <color name="previous_appointment_dark">#3a3a3a</color>
+    <color name="line_datasheet">#9F9F9F</color>
+    <!--    calendar-->
+    <color name="calendarGreen">#99e500</color>
+    <color name="calendar0">#38db26</color>
+    <color name="calendar2">#c4d91f</color>
+    <color name="calendar4">#ffc90e</color>
+    <color name="calendar6">#ff7f27</color>
+    <color name="calendar8">#ff2727</color>
+    <color name="calendarToday">#00adff</color>
+<!--    stilus: sotetkek, light mode-->
+    <color name="wave_dark_blue">#1a5366</color>
+    <color name="button_dark_blue">#154453</color>
+    <color name="appbar_dark_blue">#e9f9ff</color>
+    <color name="profile_dark_blue">#4699b4</color>
+    <color name="ic_active">#479ab5</color>
+    <!--    stilus: sotetkek, dark mode-->
+    <color name="wave_dark_blue_d">#1690bb</color>
+    <color name="button_dark_blue_d">#106887</color>
+    <color name="profile_dark_blue_d">#5dcdf3</color>
+    <!--    stilus: citromsárga, light mode-->
+    <color name="wave_2">#a0900a</color>
+    <color name="button_2">#6d6206</color>
+    <color name="appbar_2">#fff8b9</color>
+    <color name="profile_2">#cbb500</color>
+    <!--    stilus: citromsárga, dark mode-->
+    <color name="wave_2_d">#d0c981</color>
+    <color name="button_2_d">#9d9761</color>
+    <color name="profile_2_d">#aeac6e</color>
+    <!--    stilus: rózsaszín, light mode-->
+    <color name="wave_3">#bc295b</color>
+    <color name="button_3">#891d42</color>
+    <color name="appbar_3">#fce0df</color>
+    <color name="profile_3">#fe3280</color>
+    <!--    stilus: rózsaszín, dark mode-->
+    <color name="wave_3_d">#cb688a</color>
+    <color name="button_3_d">#974d67</color>
+    <color name="profile_3_d">#cc7e94</color>
+    <!--    stilus: zöld, light mode-->
+    <color name="wave_4">#879730</color>
+    <color name="button_4">#59641f</color>
+    <color name="appbar_4">#f0ecd9</color>
+    <color name="profile_4">#a5c400</color>
+    <!--    stilus: zöld, dark mode-->
+    <color name="wave_4_d">#bbc96e</color>
+    <color name="button_4_d">#8b9552</color>
+    <color name="profile_4_d">#a8b85f</color>
+    <!--    stilus: narancs, light mode-->
+    <color name="wave_5">#bc6a30</color>
+    <color name="button_5">#894d22</color>
+    <color name="appbar_5">#f5e7d7</color>
+    <color name="profile_5">#ea8742</color>
+    <!--    stilus: narancs, dark mode-->
+    <color name="wave_5_d">#ca8e65</color>
+    <color name="button_5_d">#966a4b</color>
+    <color name="profile_5_d">#c7a27a</color>
+    <!--    stilus: fekete, light mode-->
+    <color name="wave_6">#33343a</color>
+    <color name="button_6">#181818</color>
+    <color name="appbar_6">#dddfff</color>
+    <color name="profile_6">#656874</color>
+    <!--    stilus: fekete, dark mode-->
+    <color name="wave_6_d">#757886</color>
+    <color name="button_6_d">#585a65</color>
+    <color name="profile_6_d">#878d9b</color>
+
+    <color name="yellow">#FFD700</color>
+    <color name="light_yellow">#FFF9C4</color>
+
+<!--    dots inactive colors-->
+    <color name="dark_one">#dcdcdc</color>
+    <color name="dark_two">#dcdcdc</color>
+    <color name="dark_three">#dcdcdc</color>
+<!--    dots active colors-->
+    <color name="blue_one">#4699b4</color>
+    <color name="blue_two">#4699b4</color>
+    <color name="blue_three">#4699b4</color>
+    <array name="active">
+        <item>@color/blue_one</item>
+        <item>@color/blue_two</item>
+        <item>@color/blue_three</item>
+    </array>
+    <array name="inactive">
+        <item>@color/dark_one</item>
+        <item>@color/dark_two</item>
+        <item>@color/dark_three</item>
+    </array>
+
+</resources>

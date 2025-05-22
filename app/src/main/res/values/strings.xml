@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Sportkardi</string>
+    <string name="add_new_patient">Új páciens felvitele</string>
+    <string name="saved_datas">Mentett adatlapok</string>
+    <string name="next">Tovább</string>
+
+    <string-array name="alcohol">
+        <item>soha</item>
+        <item>alkalmanként</item>
+        <item>rendszeresen</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>férfi</item>
+        <item>nő</item>
+    </string-array>
+
+    <string-array name="patient_list"></string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator">
+
+    <!-- 3D forgatás animáció, bal felső sarok körül -->
+    <rotate
+        android:fromDegrees="-90"
+        android:toDegrees="0"
+        android:pivotX="0%"
+        android:pivotY="0%"
+        android:duration="500" />
+
+    <!-- Skálázás, hogy növekedjen -->
+    <scale
+        android:fromXScale="-2.0"
+        android:toXScale="1.0"
+        android:fromYScale="0.0"
+        android:toYScale="1.0"
+        android:pivotX="0%"
+        android:pivotY="0%"
+        android:duration="500" />
+
+    <!-- Elhalványulás animáció, hogy láthatóvá váljon -->
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:duration="500" />
+</set>

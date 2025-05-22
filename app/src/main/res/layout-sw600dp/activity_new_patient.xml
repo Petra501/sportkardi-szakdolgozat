@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.NewPatientActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dataSheetTextView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Adatlap"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:id="@+id/athleteDataTextView"
+            android:layout_marginLeft="10dp"
+            android:layout_width="135dp"
+            android:layout_height="31dp"
+            android:layout_below="@id/dataSheetTextView"
+            android:text="Sportoló adatai:"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/nameLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/athleteDataTextView">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="neve:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="textCapSentences|textPersonName"
+                app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+                app:layout_constraintEnd_toEndOf="@+id/heightEditText"
+                app:layout_constraintStart_toStartOf="@+id/heightEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heightLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/nameLinearLayout">
+
+            <TextView
+                android:id="@+id/heightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="magassága (cm):"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <EditText
+                android:id="@+id/heightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+                app:layout_constraintEnd_toEndOf="@+id/heightEditText"
+                app:layout_constraintStart_toStartOf="@+id/heightEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weightLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/heightLinearLayout">
+
+            <TextView
+                android:id="@+id/weightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="testsúlya (kg):"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <EditText
+                android:id="@+id/weightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+                app:layout_constraintEnd_toEndOf="@+id/heightEditText"
+                app:layout_constraintStart_toStartOf="@+id/heightEditText" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/periodRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weightLinearLayout"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/preparationPeriodRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:text="felkészülési időszak" />
+
+            <RadioButton
+                android:id="@+id/competitionPeriodRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:text="versenyidőszak" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/sportLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/periodRadioGroup">
+
+            <TextView
+                android:id="@+id/sportTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="sportág:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <EditText
+                android:id="@+id/sportEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="text"
+                app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+                app:layout_constraintEnd_toEndOf="@+id/heightEditText"
+                app:layout_constraintStart_toStartOf="@+id/heightEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weeklyWorkoutLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/sportLinearLayout">
+
+            <TextView
+                android:id="@+id/weeklyWorkoutTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="heti edzés óraszám:"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <EditText
+                android:id="@+id/weeklyWorkoutEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+                app:layout_constraintEnd_toEndOf="@+id/heightEditText"
+                app:layout_constraintStart_toStartOf="@+id/heightEditText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sportAgeLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/weeklyWorkoutLinearLayout">
+
+            <TextView
+                android:id="@+id/sportAgeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="31dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="hány éve sportol?"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <EditText
+                android:id="@+id/sportAgeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                app:layout_constraintBottom_toBottomOf="@+id/nameTextView"
+                app:layout_constraintEnd_toEndOf="@+id/heightEditText"
+                app:layout_constraintStart_toStartOf="@+id/heightEditText" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/sportTypeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sportAgeLinearLayout"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/hobbySportRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:text="hobbi sportoló" />
+
+            <RadioButton
+                android:id="@+id/amateurSportRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:text="amatőr versenysportoló" />
+
+            <RadioButton
+                android:id="@+id/elitSportRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:text="elit versenysportoló" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_below="@id/sportTypeRadioGroup"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"/>
+
+        <LinearLayout
+            android:id="@+id/complaintBlokkLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/line1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp">
+
+            <!-- Bal oldali oszlop -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/athleteComplaintTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Panasza:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/breathingLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/breathingTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nehézlégzés"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/breathingCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/chestPainLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/chestPainTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mellkasi fájdalom"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/chestPainCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rhythmDisorderLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/rhythmDisorderTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ritmuszavar"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/rhythmDisorderCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reducedCapacityLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/reducedCapacityTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="csökkent terhelhetőség"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/reducedCapacityCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Jobb oldali oszlop -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/moreComplaintTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Egyéb panasz:"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp"/>
+
+                <LinearLayout
+                    android:id="@+id/hypertensionLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/hypertensionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="magas vérnyomás"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/hypertensionCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bloodSugarLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/bloodSugarTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="magas vércukorszint"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/bloodSugarCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/highCholesterolLevelLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/highCholesterolLevelTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="magas koleszterinszint"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/highCholesterolLevelCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/blackOutLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/blackOutTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="eszméletvesztés"
+                        android:textSize="16sp"
+                        android:gravity="center_vertical"/>
+
+                    <CheckBox
+                        android:id="@+id/blackOutCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_below="@id/complaintBlokkLinearLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"/>
+
+        <TextView
+            android:id="@+id/habitsTextView"
+            android:layout_width="135dp"
+            android:layout_height="31dp"
+            android:layout_below="@id/line2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Szokások:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/smokingLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/habitsTextView"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/smokingextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dohányzás"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/smokingCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/alcoholLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smokingLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="alkoholfogyasztás"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <Spinner
+                android:id="@+id/alcoholSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:ems="16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coffeeLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/alcoholLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kávé"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/coffeeCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/coffeeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:text="napi adag (db):"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/coffeeEditText"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/colaLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coffeeLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cola"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/colaCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/colaTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:text="napi adag (db):"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/colaEditText"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/energyDrinkLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/colaLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="energiaital"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/energyDrinkCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/energyDrinkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:text="napi adag (db):"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/energyDrinkEditText"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/nutritionalSupplementLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/energyDrinkLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nutritionalSupplementTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="táplálékkiegészítő"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/nutritionalSupplementCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_below="@id/nutritionalSupplementLinearLayout"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="0dp"/>
+
+        <TextView
+            android:id="@+id/medicineTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_below="@id/line3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Gyógyszerszedés:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/cholesterolLoweringLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/medicineTextView"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="koleszterin csökkentő"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/cholesterolLoweringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/cholesterolLoweringNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="neve:"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/cholesterolLoweringNameEditText"
+                android:layout_width="255dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/cholesterolLoweringTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="adag:"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/cholesterolLoweringPortionEditText"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bloodPressureLoweringLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cholesterolLoweringLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="vérnyomás csökkentő"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/bloodPressureLoweringCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/bloodPressureLoweringNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="neve:"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/bloodPressureLoweringNameEditText"
+                android:layout_width="255dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/bloodPressureLoweringTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="adag:"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/bloodPressureLoweringPortionEditText"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:inputType="text"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/antiAsthmaLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bloodPressureLoweringLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="asthma ellenes szer"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <CheckBox
+                android:id="@+id/antiAsthmaCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/antiAsthmaNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="neve:"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/antiAsthmaNameEditText"
+                android:layout_width="255dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="0dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/antiAsthmaPortionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="adag:"
+                android:textSize="16sp"
+                android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/antiAsthmaPortionEditText"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:inputType="text"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/antiAsthmaLinearLayout"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/centerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/saveDatasButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kitöltés befejezése" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

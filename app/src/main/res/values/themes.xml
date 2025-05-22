@@ -1,0 +1,224 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--    <style name="Theme.Sportkardi" parent="Theme.MaterialComponents.Light.NoActionBar">-->
+    <!--        <item name="colorPrimary">@color/dark_blue</item>-->
+    <!--        <item name="android:windowAnimationStyle">@null</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="AppTheme.NoAnimation" parent="Theme.AppCompat.Light.NoActionBar">-->
+    <!--        <item name="android:windowAnimationStyle">@null</item>-->
+    <!--        <item name="colorButtonNormal">@color/light_blue</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">-->
+    <!--        <item name="backgroundTint">@null</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="ItemDetailText" parent="TextAppearance.AppCompat.Subhead"/>-->
+    <!--    <style name="ItemTitle" parent="TextAppearance.AppCompat.Headline"/>-->
+    <!--    <style name="ItemDetailTitle" parent="TextAppearance.AppCompat.Headline"/>-->
+    <!-- Sötétkék téma -->
+    <style name="Theme.Sportkardi.DarkBlue" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_dark_blue</item>
+        <item name="colorPrimaryDark">@color/button_dark_blue</item>
+        <item name="background">@color/appbar_dark_blue</item>
+        <item name="colorAccent">@color/profile_dark_blue</item>
+        <item name="colorOnSecondary">@color/ic_active</item>
+        <item name="backgroundColor">@color/background_light</item>
+        <item name="colorOnPrimaryContainer">@color/profile_dark_blue</item>
+        <item name="colorOnPrimaryFixedVariant">@color/appbar_dark_blue</item>
+        <item name="colorOnSecondaryContainer">@color/background_light</item>
+        <item name="colorOnSurface">@color/input_color</item>
+        <item name="colorControlNormal">@color/previous_appointment_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Sárga téma -->
+    <style name="Theme2" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_2</item>
+        <item name="colorPrimaryDark">@color/button_2</item>
+        <item name="colorAccent">@color/profile_2</item>
+        <item name="background">@color/appbar_2</item>
+        <item name="backgroundColor">@color/background_light</item>
+        <item name="colorOnPrimaryContainer">@color/profile_2</item>
+        <item name="colorOnPrimaryFixedVariant">@color/appbar_2</item>
+        <item name="colorOnSecondaryContainer">@color/background_light</item>
+        <item name="colorOnSurface">@color/input_color</item>
+        <item name="colorControlNormal">@color/previous_appointment_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Rózsaszín téma -->
+    <style name="Theme3" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_3</item>
+        <item name="colorPrimaryDark">@color/button_3</item>
+        <item name="colorAccent">@color/profile_3</item>
+        <item name="background">@color/appbar_3</item>
+        <item name="backgroundColor">@color/background_light</item>
+        <item name="colorOnPrimaryContainer">@color/profile_3</item>
+        <item name="colorOnPrimaryFixedVariant">@color/appbar_3</item>
+        <item name="colorOnSecondaryContainer">@color/background_light</item>
+        <item name="colorOnSurface">@color/input_color</item>
+        <item name="colorControlNormal">@color/previous_appointment_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Zöld téma -->
+    <style name="Theme4" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_4</item>
+        <item name="colorPrimaryDark">@color/button_4</item>
+        <item name="colorAccent">@color/profile_4</item>
+        <item name="background">@color/appbar_4</item>
+        <item name="backgroundColor">@color/background_light</item>
+        <item name="colorOnPrimaryContainer">@color/profile_4</item>
+        <item name="colorOnPrimaryFixedVariant">@color/appbar_4</item>
+        <item name="colorOnSecondaryContainer">@color/background_light</item>
+        <item name="colorOnSurface">@color/input_color</item>
+        <item name="colorControlNormal">@color/previous_appointment_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Narancs téma -->
+    <style name="Theme5" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_5</item>
+        <item name="colorPrimaryDark">@color/button_5</item>
+        <item name="colorAccent">@color/profile_5</item>
+        <item name="background">@color/appbar_5</item>
+        <item name="backgroundColor">@color/background_light</item>
+        <item name="colorOnPrimaryContainer">@color/profile_5</item>
+        <item name="colorOnPrimaryFixedVariant">@color/appbar_5</item>
+        <item name="colorOnSecondaryContainer">@color/background_light</item>
+        <item name="colorOnSurface">@color/input_color</item>
+        <item name="colorControlNormal">@color/previous_appointment_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Fekete téma -->
+    <style name="Theme6" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_6</item>
+        <item name="colorPrimaryDark">@color/button_6</item>
+        <item name="colorAccent">@color/profile_6</item>
+        <item name="background">@color/appbar_6</item>
+        <item name="backgroundColor">@color/background_light</item>
+        <item name="colorOnPrimaryContainer">@color/profile_6</item>
+        <item name="colorOnPrimaryFixedVariant">@color/appbar_6</item>
+        <item name="colorOnSecondaryContainer">@color/background_light</item>
+        <item name="colorOnSurface">@color/input_color</item>
+        <item name="colorControlNormal">@color/previous_appointment_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Dark - Sötétkék téma -->
+    <style name="Theme.Sportkardi.DarkBlueD" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_dark_blue_d</item>
+        <item name="colorPrimaryDark">@color/button_dark_blue_d</item>
+        <item name="background">@color/appbar_dark</item>
+        <item name="colorAccent">@color/profile_dark_blue_d</item>
+        <item name="colorOnSecondary">@color/ic_active</item>
+        <item name="backgroundColor">@color/background_dark</item>
+        <item name="colorOnPrimaryContainer">@color/appbar_dark</item>
+        <item name="colorOnPrimaryFixedVariant">@color/profile_dark_blue_d</item>
+        <item name="colorOnSurface">@color/input_color_dark</item>
+        <item name="colorOnSecondaryContainer">@color/card_dark</item>
+        <item name="colorControlNormal">@color/previous_appointment_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Dark - Sárga téma -->
+    <style name="Theme2D" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_2_d</item>
+        <item name="colorPrimaryDark">@color/button_2_d</item>
+        <item name="colorAccent">@color/profile_2_d</item>
+        <item name="background">@color/appbar_dark</item>
+        <item name="backgroundColor">@color/background_dark</item>
+        <item name="colorOnPrimaryContainer">@color/appbar_dark</item>
+        <item name="colorOnPrimaryFixedVariant">@color/profile_2_d</item>
+        <item name="colorOnSecondaryContainer">@color/card_dark</item>
+        <item name="colorOnSurface">@color/input_color_dark</item>
+        <item name="colorControlNormal">@color/previous_appointment_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Dark - Rózsaszín téma -->
+    <style name="Theme3D" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_3_d</item>
+        <item name="colorPrimaryDark">@color/button_3_d</item>
+        <item name="colorAccent">@color/profile_3_d</item>
+        <item name="background">@color/appbar_dark</item>
+        <item name="backgroundColor">@color/background_dark</item>
+        <item name="colorOnPrimaryContainer">@color/appbar_dark</item>
+        <item name="colorOnPrimaryFixedVariant">@color/profile_3_d</item>
+        <item name="colorOnSecondaryContainer">@color/card_dark</item>
+        <item name="colorOnSurface">@color/input_color_dark</item>
+        <item name="colorControlNormal">@color/previous_appointment_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Dark - Zöld téma -->
+    <style name="Theme4D" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_4_d</item>
+        <item name="colorPrimaryDark">@color/button_4_d</item>
+        <item name="colorAccent">@color/profile_4_d</item>
+        <item name="background">@color/appbar_dark</item>
+        <item name="backgroundColor">@color/background_dark</item>
+        <item name="colorOnPrimaryContainer">@color/appbar_dark</item>
+        <item name="colorOnPrimaryFixedVariant">@color/profile_4_d</item>
+        <item name="colorOnSecondaryContainer">@color/card_dark</item>
+        <item name="colorOnSurface">@color/input_color_dark</item>
+        <item name="colorControlNormal">@color/previous_appointment_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Dark - Narancs téma -->
+    <style name="Theme5D" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_5_d</item>
+        <item name="colorPrimaryDark">@color/button_5_d</item>
+        <item name="colorAccent">@color/profile_5_d</item>
+        <item name="background">@color/appbar_dark</item>
+        <item name="backgroundColor">@color/background_dark</item>
+        <item name="colorOnPrimaryContainer">@color/appbar_dark</item>
+        <item name="colorOnPrimaryFixedVariant">@color/profile_5_d</item>
+        <item name="colorOnSecondaryContainer">@color/card_dark</item>
+        <item name="colorOnSurface">@color/input_color_dark</item>
+        <item name="colorControlNormal">@color/previous_appointment_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <!-- Dark - Fekete téma -->
+    <style name="Theme6D" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wave_6_d</item>
+        <item name="colorPrimaryDark">@color/button_6_d</item>
+        <item name="colorAccent">@color/profile_6_d</item>
+        <item name="background">@color/appbar_dark</item>
+        <item name="backgroundColor">@color/background_dark</item>
+        <item name="colorOnPrimaryContainer">@color/appbar_dark</item>
+        <item name="colorOnPrimaryFixedVariant">@color/profile_6_d</item>
+        <item name="colorOnSecondaryContainer">@color/card_dark</item>
+        <item name="colorOnSurface">@color/input_color_dark</item>
+        <item name="colorControlNormal">@color/previous_appointment_dark</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+</resources>

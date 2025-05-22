@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="500dp"
+        android:layout_height="491dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/szivecske"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.501"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="480dp"
+        android:layout_height="447dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/background_card"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="479dp"
+            android:layout_height="446dp"
+            android:background="@color/background_card">
+
+            <LinearLayout
+                android:id="@+id/centerLayout"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/addNewPatientButton"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="newPatient"
+                    android:text="@string/add_new_patient" />
+
+                <Button
+                    android:id="@+id/savedDatasButton"
+                    android:layout_width="323dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:onClick="savedDatas"
+                    android:text="@string/saved_datas" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

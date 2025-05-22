@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DataActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/dataSheetTextView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Sportoló adatai"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:id="@+id/nameLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/dataSheetTextView">
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="neve:"
+                android:textSize="@dimen/font"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/nameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/heightLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/nameLinearLayout">
+
+            <TextView
+                android:id="@+id/heightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="magassága (cm):"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/heightTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weightLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/heightLinearLayout">
+
+            <TextView
+                android:id="@+id/weightTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="testsúlya (kg):"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/weightTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/periodRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/weightLinearLayout">
+
+            <TextView
+                android:id="@+id/periodTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="időszak:"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/periodTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sportLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/periodRadioGroup">
+
+            <TextView
+                android:id="@+id/sportTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="sportág:"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/sportTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weeklyWorkoutLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/sportLinearLayout">
+
+            <TextView
+                android:id="@+id/weeklyWorkoutTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="heti edzés óraszám:"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/weeklyWorkoutTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sportAgeLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/weeklyWorkoutLinearLayout">
+
+            <TextView
+                android:id="@+id/sportAgeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="hány éve sportol?:"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/sportAgeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sportTypeRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/sportAgeLinearLayout">
+
+            <TextView
+                android:id="@+id/sportTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="a sportoló:"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+            <TextView
+                android:id="@+id/sportTypeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/complaintBlokkLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sportTypeRadioGroup"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space">
+
+                <TextView
+                    android:id="@+id/athleteComplaintTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="panasza:"
+                    android:textSize="@dimen/font"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp"/>
+
+                <TextView
+                    android:id="@+id/complaintsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font"
+                    app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="16dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/moreComplaintLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/complaintBlokkLinearLayout">
+
+            <TextView
+                android:id="@+id/moreComplaintTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="egyéb panasz:"
+                android:textStyle="bold"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"/>
+
+            <TextView
+                android:id="@+id/moreComplaintTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/habitsLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/moreComplaintLinearLayout">
+            <TextView
+                android:id="@+id/habitsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="szokások:"
+                android:textSize="@dimen/font"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"/>
+
+            <TextView
+                android:id="@+id/habitsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font"
+                app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/medicineLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/space"
+            android:layout_below="@id/habitsLinearLayout">
+
+        <TextView
+            android:id="@+id/medicineTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/habitsLinearLayout"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="gyógyszerszedés:"
+            android:textSize="@dimen/font"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"/>
+
+        <TextView
+            android:id="@+id/medicineTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font"
+            app:layout_constraintTop_toBottomOf="@+id/athleteDataTextView"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="16dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/medicineLinearLayout"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/centerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/saveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mentés" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

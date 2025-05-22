@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Sportkardi.DarkBlue"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activity.CardiPatientListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PatientDataSheetActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.CardiIntroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PatientIntroActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PatientAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PatientSettingsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PatientProfileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.CardiSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PatientBloodPressureActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PatientNewAppointmentActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.CardiAppointmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CardiProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.ChangeProfileDatasAcitvity"
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.CardiMainMenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.CardiRegisterNewPatientActivity"
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.PatientMainMenuActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.CardiShowAthleteDatasActivity"
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.SavedDatasActivity"
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.DataActivity"
+            android:exported="false"
+            android:parentActivityName=".Activity.NewPatientActivity" />
+        <activity
+            android:name=".Activity.SavedDatasLoginActivity"
+            android:exported="false"
+            android:parentActivityName=".Activity.MainActivity" />
+        <activity
+            android:name=".Activity.NewPatientActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Activity.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialogConstraintLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/popup_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/successTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingTop="28dp"
+            android:text="Sikeres törlés!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/dialogConstraintLayout"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <TextView
+            android:id="@+id/descTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Az időpont törölve lett a rendszerből."
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintTop_toBottomOf="@id/successTextView"
+            app:layout_constraintBottom_toTopOf="@id/doneButton"/>
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:textSize="14sp"
+            app:cornerRadius = "12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/descTextView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/success"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dialogConstraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/dialogConstraintLayout" />
+
+    <View
+        android:layout_width="22dp"
+        android:layout_height="7dp"
+        android:background="?backgroundColor"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
